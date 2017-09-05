@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#DCD9CF"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp" >
+
+        <ImageView
+            android:id="@+id/i_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/abc_ic_ab_back_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="详细信息" />
+
+       
+    </RelativeLayout> 
+ <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/i_userImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/user_image" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/i_userImage"
+            android:text="用户名" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/i_userImage"
+            android:orientation="horizontal" >
+
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_profile_location_night"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2f4f4f"
+                android:text="重庆"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fansCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fans"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/i_userImage"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/focusCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follow"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/fansCount"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/i_userImage"
+            android:text="粉丝" />
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/fans"
+            android:text="关注" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/userName"
+            android:src="@drawable/ic_sex_men" />
+    </RelativeLayout>
+    
+     <RadioGroup
+            android:id="@+id/radiobutton_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#88c0c0c0"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+            <RadioButton
+                android:id="@+id/rb_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"      
+                android:gravity="center_horizontal"
+                android:text="投稿" />
+
+            <RadioButton
+                android:id="@+id/rb_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="收藏" />
+
+            <RadioButton
+                android:id="@+id/rb_commit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"         
+                android:gravity="center_horizontal"
+                android:text="评论" />
+        </RadioGroup>
+    
+
+    <!-- 此布局用来放4个碎片 -->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2" >
+    </FrameLayout>
+    
+    <Button
+            android:id="@+id/user_is_focus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="关注"
+            android:focusable="true"
+            android:background="@drawable/login_button_selector"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            />
+
+</LinearLayout>

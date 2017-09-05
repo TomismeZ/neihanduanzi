@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#DCD9CF"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp" >
+
+        <ImageView
+            android:id="@+id/i_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/abc_ic_ab_back_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="推荐" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_recommend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aac0c0c0"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+
+        <RadioButton
+            android:id="@+id/rb_video"
+            style="@style/MyStyle"
+            android:checked="true"
+            android:text="视频" />
+
+        <RadioButton
+            android:id="@+id/rb_image"
+            style="@style/MyStyle"
+            android:text="图片" />
+
+        <RadioButton
+            android:id="@+id/rb_joke"
+            style="@style/MyStyle"
+            android:text="段子" />
+    </RadioGroup>
+
+    <!-- 此类位于support.v4包 下 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_recommend"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

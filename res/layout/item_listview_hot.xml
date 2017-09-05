@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_image" />
+
+        <Button
+            android:id="@+id/subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="订阅" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_marginLeft="5dp"
+            
+            android:text="昵稱" />
+
+        <TextView
+            android:id="@+id/describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/avatar"
+           android:layout_marginTop="10dp"
+             android:layout_marginLeft="5dp"
+            android:textSize="8sp"
+            android:text="描述" />
+
+        <TextView
+            android:id="@+id/subscribe_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/describe"
+            android:layout_toRightOf="@+id/avatar"
+             android:layout_marginLeft="5dp"
+            android:textSize="8sp"
+            android:layout_alignParentBottom="true"
+             />
+
+        <TextView
+            android:id="@+id/noteCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/describe"
+            android:layout_toRightOf="@+id/subscribe_count"
+            android:layout_marginLeft="5dp"
+            android:textSize="8sp"
+            android:layout_alignParentBottom="true"
+             />
+    </RelativeLayout>
+
+</LinearLayout>

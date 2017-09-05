@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#DCD9CF"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp" >
+
+        <ImageView
+            android:id="@+id/i_userImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_image_selector" />
+
+        <RadioGroup
+            android:id="@+id/rg_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/dis_reba"
+                style="@style/MyStyle"
+                android:checked="true"
+                android:text="精品热吧" />
+
+            <RadioButton
+                android:id="@+id/t_near"
+                style="@style/MyStyle"
+                android:text="附近段友" />
+
+        </RadioGroup>
+
+        
+    </RelativeLayout>
+    <!-- 此类位于support.v4包 下 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_discovery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

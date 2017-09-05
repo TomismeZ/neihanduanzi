@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 此布局用来放4个碎片 -->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+    
+
+    <RadioGroup
+        android:id="@+id/radiobutton_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#88c0c0c0"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:textColor="@color/font"
+            android:drawableTop="@drawable/home_selector"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+ 
+        <RadioButton
+            android:id="@+id/rb_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/discovery_selector"
+            android:gravity="center_horizontal"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rb_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/check_selector"
+            android:gravity="center_horizontal"
+            android:text="审核" />
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/message_selector"
+            android:gravity="center_horizontal"
+            android:text="消息" />
+    </RadioGroup>
+
+</LinearLayout>
